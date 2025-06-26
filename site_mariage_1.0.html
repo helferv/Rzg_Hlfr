@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mariage tah les zinzins</title>
+  <style>
+    body {
+      font-family: garamond, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #000;
+    }
+    header {
+      padding: 30px 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #f2f2f2;
+      border-bottom: 1px solid #ccc;
+    }
+    nav button {
+      font-family: inherit;
+      padding: 15px 30px;
+      background: none;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    nav button.active {
+      border-bottom: 3px solid #5d3838;
+      font-weight: bold;
+    }
+    .tab-content {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      color: #af8888;
+    }
+    .cagnotte-btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #5d3838;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .cagnotte-btn:hover {
+      background-color: #7b4e4e;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mariage tah les zinzins</h1>
+  <p>Rejoignez-nous pour une journée inoubliable sous les étoiles !</p>
+</header>
+
+<nav>
+  <button class="tab-btn active" data-tab="info">Informations</button>
+  <button class="tab-btn" data-tab="cagnotte">Gesticul'</button>
+  <button class="tab-btn" data-tab="mairie">5 Juillet</button>
+  <button class="tab-btn" data-tab="chateau">19 juillet</button>
+
+</nav>
+
+<section id="info" class="tab-content active">
+  <h2>À propos de l'événement</h2>
+  <p><strong>Date :</strong> Samedi 19 juillet 2025</p>
+  <p><strong>Lieu :</strong> Parc de la Plage, Marseille</p>
+  <p>Musique live, food trucks, animations & feux d’artifice !</p>
+  
+  <h3>Informations pratiques</h3>
+  <ul>
+    <li>Ouverture des portes : 14h</li>
+    <li>Performance de danse électronique de Foufa la plus belle à 19h</li>
+    <li>Entrée gratuite</li>
+    <li>Parking disponible à proximité</li>
+  </ul>
+</section>
+
+<section id="mairie" class="tab-content">
+  <h2>I love this game</h2>
+  <p>❤️❤️❤️❤️❤️❤️❤️❤️</p>
+</section>
+
+<section id="chateau" class="tab-content">
+  <h2>I love this game</h2>
+  <p>❤️❤️❤️❤️❤️❤️❤️❤️</p>
+</section>
+
+<section id="cagnotte" class="tab-content">
+  <h2>Contribuez à notre cagnotte !</h2>
+  <p>Vous souhaitez participer à notre aventure ? Chaque contribution nous touche profondément ❤️</p>
+  <button class="cagnotte-btn">Participer à la cagnotte</button>
+</section>
+
+<footer>
+  <p>&copy; 2025 Soirée d'Été - Tous droits réservés</p>
+</footer>
+
+<script>
+  const buttons = document.querySelectorAll('.tab-btn');
+  const tabs = document.querySelectorAll('.tab-content');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Reset all buttons and contents
+      buttons.forEach(btn => btn.classList.remove('active'));
+      tabs.forEach(tab => tab.classList.remove('active'));
+
+      // Activate selected
+      button.classList.add('active');
+      document.getElementById(button.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
