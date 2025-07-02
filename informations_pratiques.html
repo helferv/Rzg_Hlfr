@@ -31,7 +31,7 @@
       cursor: pointer;
     }
     nav button.active {
-      border-bottom: 3px solid #5d3838;
+      border-bottom: 3px solid #8a5454;
       font-weight: bold;
     }
     .tab-content {
@@ -50,7 +50,7 @@
       text-align: center;
       margin-top: 40px;
       padding: 20px;
-      color: #af8888;
+      color: #000000;
     }
     .cagnotte-btn {
       margin-top: 20px;
@@ -76,14 +76,14 @@
 <nav>
   <button class="tab-btn active" data-tab="accueil">Acceuil</button>
   <button class="tab-btn" data-tab="mairie">Le mariage du 5 Juillet à la mairie</button>
-  <button class="tab-btn" data-tab="chateau">La cérémonie du 19 juillet au manoir</button>
+  <button class="tab-btn" data-tab="chateau">La cérémonie du 19 Juillet au manoir</button>
   <button class="tab-btn" data-tab="cagnotte">Cadeaux</button>
 </nav>
 
 <section id="accueil" class="tab-content active">
   <h2>Bienvenue à notre mariage !</h2>
   <p>
-    Merci d’être présents pour partager avec nous ce moment si précieux. Nous célébrons notre amour à la mairie, puis au manoir, afin de vivre ensemble une journée mémorable.
+    Merci d’être présents pour partager avec nous ce moment si précieux. Nous célébrons notre amour à la mairie, puis au manoir, afin de partager ensemble de super moments.
   </p>
   <p>
     Sur ce site, vous trouverez toutes les infos utiles : horaires, lieux, et déroulé des évenements.
@@ -123,20 +123,19 @@
     <li>Les photos et vidéos sont autorisées discrètement 😉</li>
   </ul>
 
+  <hr>
 
   <h2>Puis on profite de cette journée ensemble</h2>
 
 
   <h3>📍 Casa de la Madre</h3>
   <ul>
-    <li>LA grâce de Dieu : 7 impasse du moulin 91430 Igny</li>
+    <li>La grâce de Dieu : 7 impasse du moulin 91430 Igny</li>
   </ul>
 
-  <h3>⏰ Horaires &amp; ponctualité</h3>
+  <h3>⏰ Horaires </h3>
   <ul>
     <li>Du coup après la cérémonie ... vers 16 h j'imagine 😅</li>
-    <li>Venir au moment opportun 🙌</li>
-    <li>Tout retard peut probablement entrainer une certaine conséquence (non identifié) 👍.</li>
   </ul>
 
   <h3>🚗 Stationnement</h3>
@@ -144,18 +143,11 @@
     <li>Ha ça ! Alors celle là ! Elle est bien hein! (bonne chance) 🙏</li>
   </ul>
 
-  <h3>🔇 Pendant la cérémonie</h3>
-  <ul>
-    <li>Mettre les téléphones en mode silencieux 🤫</li>
-    <li>Pas de banderoles ni de drapeaux dans la salle, sauf les drapeaux algériens évidement (nan jdehek) </li>
-    <li>Les photos et vidéos sont autorisées discrètement 😉</li>
-  </ul>
-
 </section>
 
 <section id="chateau" class="tab-content">
-  <h2>I love this game</h2>
-  <p>❤️❤️❤️❤️❤️❤️❤️❤️</p>
+  <h2>Le grand moment ❤️</h2>
+  <p>Bon j'ai pas fini le site, patiente encore un peu et toutes les informations importantes seront ici</p>
 </section>
 
 <section id="cagnotte" class="tab-content">
@@ -164,13 +156,13 @@
     Certains nous ont demandé s’il y aurait une cagnotte… Alors oui, pour ceux qui préfèrent ne rien transporter le 19, ou qui ne seront pas présents, nous avons mis en place une petite cagnotte en ligne.
   </p>
   <p>
-    Aucun stress, aucune obligation — le plus beau cadeau, c’est que vous soyez là avec nous pour cette journée.
+    Aucune obligation, le plus beau cadeau, c’est que vous soyez là avec nous pour cette journée.
   </p>
-  <button class="cagnotte-btn">Participer à la cagnotte</button>
+  <button id="btn-cagnotte" class="cagnotte-btn">Participer à la cagnotte</button>
 </section>
 
 <footer>
-  <p>&copy; 2025 Soirée d'Été - Tous droits réservés</p>
+  <p>&copy; Tous droits réservés</p>
 </footer>
 
 <script>
@@ -188,6 +180,13 @@
       document.getElementById(button.dataset.tab).classList.add('active');
     });
   });
+
+  const cagnotteBtn = document.getElementById('btn-cagnotte');
+  if (cagnotteBtn) {
+    cagnotteBtn.addEventListener('click', () => {
+      window.open('https://www.lepotcommun.fr/pot/o2xvg4lg', '_blank', 'noopener,noreferrer'); 
+    });
+  }
 </script>
 
 </body>
